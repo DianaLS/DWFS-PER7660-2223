@@ -43,6 +43,15 @@ function redConverter() {
     let pixels = handler.getPixels();
 
     //Aqui tu codigo
+    //x:fila
+    //y:columna
+    /**Recorro la fila desde posicion 1*/
+    for (let x = 0; x < pixels.length; x++) {
+        /**Recorro la columna*/
+        for (let y = 0; y < pixels[x].length; y++) {
+             pixels[x][y]=[pixels[x][y][0],0,0];
+        }
+    }
 
     handler.savePixels(pixels, outputPath);
 }
